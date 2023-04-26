@@ -1,0 +1,31 @@
+{"type": "free", "apiname": "zip_discard", "lib": "libzip", "obj": "the memory allocated for it "}
+{"type": "free", "apiname": "zip_error_fini", "lib": "libzip", "obj": "internally allocated memory of the zip_error "}
+{"type": "malloc", "apiname": "zip_error_strerror", "lib": "libzip", "obj": "human - readable string for zip_error "}
+{"type": "free", "apiname": "zip_fclose", "lib": "libzip", "obj": "the memory allocated for it "}
+{"type": "malloc", "apiname": "zip_source_buffer", "lib": "libzip", "obj": "a zip source from     the buffer data of size len "}
+{"type": "malloc", "apiname": "zip_source_buffer_create", "lib": "libzip", "obj": "a zip source from     the buffer data of size len "}
+{"type": "malloc", "apiname": "zip_source_buffer_fragment_create", "lib": "libzip", "obj": "zip data source from multiple buffer "}
+{"type": "malloc", "apiname": "zip_source_buffer_fragment", "lib": "libzip", "obj": "a zip     source from the data in fragments "}
+{"type": "malloc", "apiname": "zip_source_file_create", "lib": "libzip", "obj": "data source from a file "}
+{"type": "malloc", "apiname": "zip_source_file", "lib": "libzip", "obj": "a zip source from a     file "}
+{"type": "malloc", "apiname": "zip_source_filep_create", "lib": "libzip", "obj": "data source from file * "}
+{"type": "malloc", "apiname": "zip_source_filep", "lib": "libzip", "obj": "a zip source from a     file stream "}
+{"type": "malloc", "apiname": "zip_source_function_create", "lib": "libzip", "obj": "data source from function "}
+{"type": "malloc", "apiname": "zip_source_function", "lib": "libzip", "obj": "a zip source "}
+{"type": "free", "apiname": "zip_source_free", "lib": "libzip", "obj": "resources "}
+{"type": "malloc", "apiname": "zip_source_win32a", "lib": "libzip", "obj": "data source from a windows ansi file name "}
+{"type": "malloc", "apiname": "zip_source_win32a_create", "lib": "libzip", "obj": "data source from a windows ansi file name "}
+{"type": "malloc", "apiname": "zip_source_win32handle_create", "lib": "libzip", "obj": "data source from a windows file handle "}
+{"type": "malloc", "apiname": "zip_source_win32handle", "lib": "libzip", "obj": "a zip source     from a windows file handle "}
+{"type": "malloc", "apiname": "zip_source_win32w", "lib": "libzip", "obj": "data source from a windows unicode file name "}
+{"type": "malloc", "apiname": "zip_source_win32w_create", "lib": "libzip", "obj": "data source from a windows unicode file name "}
+{"type": "malloc", "apiname": "zip_source_window_create", "lib": "libzip", "obj": "zip data source overlay "}
+{"type": "malloc", "apiname": "zip_source_zip_create", "lib": "libzip", "obj": "data source from zip file "}
+{"type": "malloc", "apiname": "zip_source_zip", "lib": "libzip", "obj": "a zip source from a     file in a zip archive "}
+{"type": "free", "apiname": "zip_close", "lib": "libzip", "obj": "archive "}
+{"type": "malloc", "apiname": "zip_open", "lib": "libzip", "obj": "archives "}
+{"type": "malloc", "apiname": "zip_open_from_source", "lib": "libzip", "obj": "archives "}
+{"type": "malloc", "apiname": "zip_source_begin_write", "lib": "libzip", "obj": "temporary files "}
+{"type": "malloc", "apiname": "zip_source_begin_write_cloning", "lib": "libzip", "obj": "temporary files "}
+{"type": "malloc", "apiname": "zip_source_make_command_bitmap", "lib": "libzip", "obj": "bitmap of supported source operations "}
+{"type": "free", "apiname": "zip_source_rollback_write", "lib": "libzip", "obj": "buffers "}
