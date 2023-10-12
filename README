@@ -1,0 +1,26 @@
+PreProcess:
+    1.craw api doc, and generate API structs. Refer to the `example_data/libpcap.json` and `example_data/struct_libpcap.json` for the data format
+    2.split sentence and preprocess doc by running `Preprocess/split_sentence.py`
+        i.You need to change `in_dir`, `out_dir`, `libs` in this code. `in_dir` should contain the crawed api doc of `libs`. `out_dir` contains results of each lib.
+        ii.cmd: `python3 ./split_sentence.py`
+Identify Malloc/Free API:
+    1.Use finetune-QA model by running `QA/run_QA.py`
+        i.You need to change `in_path`, `api_path`, `access_token` in this code. 
+        `in_path` contains some sentences, which are the results of `PreProcess-2`. 
+        `api_path` contains the apis of target lib. Refer to the `QA/API-list` for the data format.
+        `access_token` is the user token of huggingface.
+        ii.cmd: `python3 ./run_QA.py <model_name> <out_dir>`
+        `model_name` is the name of finetune-QA model.
+        `out_dir` contains results of `run_QA.py`
+    2.parse the result of model by running `QA/MF_identify.py`
+        i.You need to change `gt_api_path` and `target_libs`. `gt_api_path` contains the apis of target libs. `target_libs` is a list of libs which will be parsed.
+        ii.cmd: `python3 ./MF_identify.py <in_dir>`
+        `in_dir` is the `out_dir` of the previous step(result dir of run_QA.py).
+        iii. this step will generate results in `in_dir/final_api`
+Generate MF Pair:
+    1.Run `Pair/match_api_index.py` to identify the API parameters corresponding to the malloc/free object.
+        i.You need to change `in_path` and `out_path`.`in_path` is the result of previous step(MF_identify.py). `out_path` contains the result(parameter index).
+        ii.cmd: `python3 ./match_api_index.py`
+    2.Run `Pair/match_pair.py` to match malloc-free pairs.
+        i.You need to change `in_path` and `out_path`.`in_path` is the result of previous step. `out_path` contains the result.
+        ii.cmd: `python3 ./match_pair.py`

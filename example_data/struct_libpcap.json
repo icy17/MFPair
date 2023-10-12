@@ -1,0 +1,2 @@
+{"lib": "libpcap", "struct": " int pcap_findalldevs(pcap_if_t **alldevsp, char *errbuf)", "apiname": "pcap_findalldevs", "return_type": "int", "parameters": [{"parameter": "**alldevsp", "type": "pcap_if_t"}, {"parameter": "*errbuf", "type": "char"}]}
+{"lib": "libpcap", "struct": " void pcap_freealldevs(pcap_if_t *alldevs)", "apiname": "pcap_freealldevs", "return_type": "void", "parameters": [{"parameter": "*alldevs", "type": "pcap_if_t"}]}
